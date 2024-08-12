@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECREO TAYTA - Menú</title>
+    <meta name="description" content="Explora nuestro menú de platos típicos y deliciosos, preparados con los mejores ingredientes locales.">
+    <link rel="stylesheet" href="styles.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "RECREO TAYTA Menú",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Entradas",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Causa Rellena",
+              "description": "Papa amarilla rellena con pollo o atún."
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Ají de Gallina",
+              "description": "Gallina desmenuzada en salsa de ají amarillo."
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Platos Principales",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Lomo Saltado",
+              "description": "Carne de res salteada con cebolla y tomate."
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Ají de Gallina",
+              "description": "Gallina desmenuzada en salsa de ají amarillo."
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body id="menu-page">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo de RECREO TAYTA" width="150" height="auto" loading="lazy">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Nuevo enlace al Blog -->
+                <li><a id="login-btn" href="#">Bienvenid@</a></li> <!-- Botón Bienvenid@ alineado con los demás -->
+                <div id="login-dropdown" class="login-dropdown">
+                    <form action="#" method="post" class="login-form">
+                        <h3>Iniciar Sesión</h3>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                        <p>Iniciar sesión con:</p>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <button class="social-login fb-login">Facebook</button>
+                            <button class="social-login google-login">Google</button>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+            </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <section id="interactive-menu" class="interactive-menu">
+            <h2>Explora Nuestro Menú</h2>
+            <div class="menu-categories">
+                <button class="menu-btn" data-category="entradas">Entradas</button>
+                <button class="menu-btn" data-category="principales">Platos Principales</button>
+                <button class="menu-btn" data-category="postres">Postres</button>
+                <button class="menu-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div id="menu-items" class="menu-items">
+                <!-- Aquí se mostrarán los platos según la categoría seleccionada -->
+            </div>
+        </section>
+
+        <section id="featured-dishes" class="featured-dishes">
+            <h2>Platos Destacados</h2>
+            <div class="dishes-grid">
+                <div class="dish">
+                    <img src="plato1.jpg" alt="Ceviche Caracino - Plato típico de RECREO TAYTA" width="300" height="200" loading="lazy">
+
+                    <h3>Ceviche Caracino</h3>
+                    <p>Fresco, delicioso y con el toque especial de RECREO TAYTA.</p>
+                </div>
+                <div class="dish">
+                    <img src="plato2.jpg" alt="Pachamanca - Plato típico de RECREO TAYTA" width="300" height="200" loading="lazy">
+                    <h3>Pachamanca</h3>
+                    <p>Una tradición que no puedes perderte, cocida en tierra con sabores inigualables.</p>
+                </div>
+                <div class="dish">
+                    <img src="plato3.jpg" alt="Cuy Chactado - Plato típico de RECREO TAYTA" width="300" height="200" loading="lazy">
+                    <h3>Cuy Chactado</h3>
+                    <p>Un clásico andino, crujiente y jugoso.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RECREO TAYTA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const loginBtn = document.getElementById('login-btn');
+          const loginDropdown = document.getElementById('login-dropdown');
+  
+          loginBtn.addEventListener('click', function(event) {
+              event.preventDefault();
+              loginDropdown.style.display = loginDropdown.style.display === 'block' ? 'none' : 'block';
+          });
+  
+          document.addEventListener('click', function(event) {
+              if (!loginBtn.contains(event.target) && !loginDropdown.contains(event.target)) {
+                  loginDropdown.style.display = 'none';
+              }
+          });
+      });
+  </script>
+</body>
+
+</html>

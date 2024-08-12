@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECREO TAYTA - Contacto</title>
+    <meta name="description" content="Ponte en contacto con nosotros para más información sobre RECREO TAYTA.">
+    <link rel="stylesheet" href="styles.min.css"> <!-- Usando el CSS unificado -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://www.recreotayta.com/contacto.html",
+      "contactOption": [
+        {
+          "@type": "ContactOption",
+          "contactType": "Customer Service",
+          "availableLanguage": "Spanish",
+          "contactMethod": {
+            "@type": "ContactMethod",
+            "name": "Teléfono",
+            "url": "https://wa.me/+51987654321"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Principal 123",
+        "addressLocality": "Caraz",
+        "addressRegion": "Ancash",
+        "addressCountry": "PE"
+      }
+    }
+    </script>
+</head>
+<body id="contact-page"> <!-- Identificador único para la página de contacto -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo RECREO TAYTA" loading="lazy">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Nuevo enlace al Blog -->
+                <li><a id="login-btn" href="#">Bienvenid@</a></li> <!-- Botón Bienvenid@ alineado con los demás -->
+                <div id="login-dropdown" class="login-dropdown">
+                    <form action="#" method="post" class="login-form">
+                        <h3>Iniciar Sesión</h3>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                        <p>Iniciar sesión con:</p>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <button class="social-login fb-login">Facebook</button>
+                            <button class="social-login google-login">Google</button>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+            </ul>            
+        </nav>
+    </header>
+
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p class="intro-text">Estamos aquí para ayudarte. Ponte en contacto con nosotros para cualquier consulta o reserva. ¡Nos encantaría saber de ti!</p>
+
+        <div class="contact-columns">
+            <div class="contact-column">
+                <h3>Dirección:</h3>
+                <p>Calle Principal 123, Caraz, Ancash</p>
+            </div>
+            <div class="contact-column">
+                <h3>Teléfono:</h3>
+                <p><a href="https://wa.me/+51987654321?text=Hola,%20me%20interesa%20saber%20más%20sobre%20RECREO%20TAYTA">+51 987 654 321</a></p>
+            </div>
+            <div class="contact-column">
+                <h3>Email:</h3>
+                <p><a href="mailto:info@recreotayta.com">info@recreotayta.com</a></p>
+            </div>
+        </div>
+
+        <div class="contact-columns">
+            <div class="contact-column">
+                <h3>Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7880.4329113297!2d-77.811501!3d-9.04401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a953bdbb0b5411%3A0xd2cad7e11d5284a1!2sNo%C3%A9%20Baz%C3%A1n%20Peralta%20618%2C%20Caraz%2002167!5e0!3m2!1ses!2spe!4v1723321812326!5m2!1ses!2spe" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Mapa de la ubicación de RECREO TAYTA en Caraz"></iframe>
+            </div>
+            <div class="contact-column">
+                <h3>Horario de Apertura</h3>
+                <ul>
+                    <li>Lun: Cerrado</li>
+                    <li>Mar: 10:00 – 15:00 / 17:00 – 22:00</li>
+                    <li>Mié: 10:00 – 15:00 / 17:00 – 22:00</li>
+                    <li>Jue: 10:00 – 15:00 / 17:00 – 22:00</li>
+                    <li>Vie: 10:00 – 15:00 / 17:00 – 22:00</li>
+                    <li>Sáb: 10:00 – 22:00</li>
+                    <li>Dom: 10:00 – 22:00</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RECREO TAYTA. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const loginDropdown = document.getElementById('login-dropdown');
+    
+            loginBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                loginDropdown.style.display = loginDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            document.addEventListener('click', function(event) {
+                if (!loginBtn.contains(event.target) && !loginDropdown.contains(event.target)) {
+                    loginDropdown.style.display = 'none';
+                }
+            });
+        });
+    </script> 
+</body>
+</html>

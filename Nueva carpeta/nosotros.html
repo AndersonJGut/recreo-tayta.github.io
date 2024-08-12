@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECREO TAYTA - Nosotros</title>
+    <meta name="description" content="Conoce más sobre RECREO TAYTA y nuestra pasión por la cocina peruana y la naturaleza.">
+    <link rel="stylesheet" href="styles.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RECREO TAYTA",
+      "url": "https://www.recreotayta.com",
+      "logo": "logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+51 987 654 321",
+        "contactType": "Customer Service",
+        "areaServed": "PE",
+        "availableLanguage": "Spanish"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo de RECREO TAYTA" width="150" height="auto" loading="lazy">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- Nuevo enlace al Blog -->
+                <li><a id="login-btn" href="#">Bienvenid@</a></li> <!-- Botón Bienvenid@ alineado con los demás -->
+                <div id="login-dropdown" class="login-dropdown">
+                    <form action="#" method="post" class="login-form">
+                        <h3>Iniciar Sesión</h3>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                        <p>Iniciar sesión con:</p>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <button class="social-login fb-login">Facebook</button>
+                            <button class="social-login google-login">Google</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="welcome">
+            <h2 class="welcome-title">Bienvenidos a <span class="highlight">RECREO TAYTA</span></h2>
+            <p>En <strong>RECREO TAYTA</strong>, ofrecemos una experiencia única que combina la tradición de la cocina andina con un entorno natural en pleno centro de Caraz. Disfruta de platos típicos preparados con los mejores ingredientes locales mientras te conectas con la naturaleza.</p>
+
+            <hr class="divider">
+
+            <section>
+                <h3>Nuestra Misión</h3>
+                <p><strong>Brindar a nuestros visitantes una experiencia gastronómica inolvidable, resaltando la riqueza de la cocina peruana y el respeto por el medio ambiente.</strong></p>
+            </section>
+
+            <hr class="divider">
+
+            <section>
+                <h3>Nuestra Visión</h3>
+                <p><strong>Convertirnos en un referente de la gastronomía andina en Caraz, ofreciendo un espacio acogedor donde la naturaleza y la buena comida se encuentran.</strong></p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RECREO TAYTA. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const loginDropdown = document.getElementById('login-dropdown');
+    
+            loginBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                loginDropdown.style.display = loginDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            document.addEventListener('click', function(event) {
+                if (!loginBtn.contains(event.target) && !loginDropdown.contains(event.target)) {
+                    loginDropdown.style.display = 'none';
+                }
+            });
+        });
+    </script> 
+</body>
+
+</html>
